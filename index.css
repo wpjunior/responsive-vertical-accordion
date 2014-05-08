@@ -1,0 +1,84 @@
+body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+#subbox {
+    height: 120px;
+    margin: 0 auto;
+}
+#subbox .item {
+    float: left;
+    margin: 2px 5px;      
+    border: 1px solid #2e3436;
+    transition: all 0.2s linear;
+    border-radius: .4em;
+    overflow: hidden;
+    width: 22.8%;
+    height: 100%;
+}
+#subbox .item .desc {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+#subbox .item .hover-content {
+    float: left;
+    height: 100%;
+    width: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgba(46, 52, 54, 0.2);
+    color: white;
+    opacity: 0.5;
+    display: none;
+    transition: all 2s linear 2s;
+}
+
+
+#subbox .item:hover .hover-content {
+    display: block;
+    width: 80%;
+    opacity: 1;
+    background-color: rgba(46, 52, 54, 0.8);
+}
+
+@media screen and (max-width: 720px) {
+    #subbox .item {
+        width: 100%;
+    }
+    #subbox .item:hover .desc {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 720px) {
+    #subbox .item {
+        width: 48%;
+    }
+    #subbox .item:hover .desc {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #subbox {
+        width: 1000px;
+    }
+
+    #subbox:hover .item{
+        width: 15%;
+    }
+
+    #subbox .item:hover {
+        width: 46.2%;
+    }
+    #subbox .item:hover .desc {
+        width: 20%;
+    }
+}
